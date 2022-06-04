@@ -1,0 +1,274 @@
+*,
+a,
+li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Classe général pour trigger les flexbox */
+.flex {
+  display: flex;
+}
+
+.navbar {
+  height: 100px;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 18px;
+  padding: 0 10px 0 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  justify-content: space-around;
+  padding-right: 50px;
+}
+
+/* Je mets inline-block pour mettre un padding */
+.nav-links a {
+  display: inline-block;
+  padding: 45px 25px 45px 32px;
+}
+
+/* Je mets un padding-top 47 px pour eviter le saut du au padding 50px sans :hover */
+.nav-links a:hover {
+  color: #0065fc;
+}
+
+/* Permet d'avoir le border en haut uniquement sur les appareils autre que smartphone  */
+@media screen and (min-width: 768px) {
+  .nav-links a:hover {
+    border-top: 5px solid #0065fc;
+    padding-top: 40px;
+  }
+}
+
+.navbar img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+#recherche {
+  padding: 20px 20px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.presentation {
+  line-height: 35px;
+}
+
+.form-group {
+  height: 30px;
+  border-radius: 10px;
+  align-items: center;
+  align-content: center;
+}
+
+.map-icon {
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.search-field {
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
+  border-left: none;
+  border-right: none;
+  padding: 10px;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #0065fc;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filter-title {
+  float: left;
+  padding: 10px 30px 10px 10px;
+}
+
+.filters {
+  gap: 30px;
+  align-items: center;
+  position: relative;
+}
+
+.filter-select {
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.icone {
+  padding: 10px;
+  background-color: #deebff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.icon-blue {
+  color: #0065fc;
+}
+
+.icon-white {
+  color: white;
+}
+
+.hidden-icon {
+  display: none;
+}
+
+.hidden-text {
+  color: white;
+}
+
+.filter-content {
+  padding: 10px;
+  border: 2px solid #f2f2f2;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-weight: bold;
+}
+
+.filter-effect:hover {
+  transform: scale(1.2);
+  background-color: #deebff;
+  transition: all 0.3s ease-in-out;
+}
+
+.info-select {
+  align-items: center;
+  width: 100%;
+}
+
+.info {
+  padding: 5px 10px;
+  border: 2px solid #f2f2f2;
+  border-radius: 50%;
+}
+
+.info-content {
+  padding: 5px 10px;
+}
+
+.bck-grey {
+  background-color: #f2f2f2;
+}
+
+/* Zone hébergement */
+
+#hebergements {
+  justify-content: space-between;
+  margin: 0 20px;
+  height: auto;
+}
+
+.hebergement-container {
+  width: 70%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  flex-direction: column;
+}
+
+.populaire-container {
+  width: 28%;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+}
+.populaire-title {
+  justify-content: space-between;
+}
+
+.marseille {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 600px;
+}
+
+.marseille-title {
+  padding: 5px 0 15px 10px;
+}
+
+.marseille-more {
+  margin-top: 20px;
+  padding: 15px 0 15px 10px;
+}
+
+.icon-grey {
+  color: #f2f2f2;
+}
+
+.bck-white {
+  background-color: white;
+}
+
+.cards-hebergement {
+  padding: 10px;
+  width: 30%;
+  height: 50%;
+  border-radius: 10px;
+}
+
+.cards-content {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.padding-5 {
+  padding: 2px;
+}
+
+.image img {
+  width: 100%;
+  height: 210px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.fit-cover {
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1440px) {
+  .cards-hebergement {
+    width: 250px;
+    height: 210px;
+  }
+
+  .image img {
+    height: 115px;
+  }
+
+  .marseille {
+    height: auto;
+  }
+}
+
+/* Zone populaire */
+
+.populaire {
+  flex-direction: column;
+  align-items: center;
+}
